@@ -1,0 +1,63 @@
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { Button } from 'react-native-elements';
+import { Avatar } from 'react-native-elements';
+import { Input } from 'react-native-elements';
+import { Icon } from 'react-native-elements';
+import { SafeAreaView } from 'react-native-web';
+
+export default function login() {
+  return (
+    <View style={styles.container}>
+      <Text >Login</Text>
+      <Input placeholder="Email" />
+      <Input placeholder="Senha" secureTextEntry />
+      <Button title="Logar" color="#4CAF50" />
+      <View/>
+      <Button title="Cadastre-se" color="#4CAF50" />
+      <Text>Esqueceu a senha?</Text>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+ function Cadastrar() {
+  return (
+    <View style={styles.container}>
+      <Text >Cadastre-se</Text>
+      <Input placeholder="Nome" />
+      <Input placeholder="Email" />
+      <Input placeholder="Senha" secureTextEntry />
+      <View/>
+      <Button title="Cadastre-se" color="#4CAF50" />
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+ function esqueceuSenha() {
+  return (
+    <View style={styles.container}>
+      <Text >Esqueceu senha</Text>
+      <Input placeholder="Email" />
+      <View/>
+      <Button title="enviar" color="#4CAF50" />
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  Titulo:{
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+}); 
